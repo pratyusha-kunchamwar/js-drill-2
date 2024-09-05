@@ -33,4 +33,18 @@ function carModelsAlphabetically() {
     });
     return modelNames.join('\n');
 }
-module.exports={getInformationWithId,lastCarInfo,carModelsAlphabetically};
+
+function allYearsOfcars() {
+    let years = [];
+
+    for (let i = 0; i < inventory.length; i++) {
+        if (inventory[i].hasOwnProperty('car_year'))
+            years.push(inventory[i].car_year);
+        else
+            years.push("propertyt not there");
+
+
+    }
+    return years;
+}
+module.exports={getInformationWithId,lastCarInfo,carModelsAlphabetically,allYearsOfcars};
