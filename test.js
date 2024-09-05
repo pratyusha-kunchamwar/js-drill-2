@@ -1,4 +1,5 @@
-const {getInformationWithId,lastCarInfo,carModelsAlphabetically,allYearsOfcars}=require('./solution');
+const {getInformationWithId,lastCarInfo,
+    carModelsAlphabetically,allYearsOfcars,findOlderCars}=require('./solution');
 console.log(getInformationWithId(44));
 // particulat id data
 console.log(getInformationWithId());
@@ -10,6 +11,9 @@ console.log(lastCarInfo());
 console.log(carModelsAlphabetically());
 //sort alphbatically
 console.log(allYearsOfcars());
+console.log(findOlderCars());
+// the nof cars older then 2000
+//the catds data in array get prints which are older then 2000
 
 // car years output in array
 // if some dont have year property "Property not ther"

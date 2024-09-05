@@ -47,4 +47,27 @@ function allYearsOfcars() {
     }
     return years;
 }
-module.exports={getInformationWithId,lastCarInfo,carModelsAlphabetically,allYearsOfcars};
+
+//older cars data
+function findOlderCars() {
+    let count = 0;
+    let Oldercars = [];
+    let years = allYearsOfcars();
+    for (let i = 0; i < years.length; i++) {
+        if (years[i] < 2000) {
+            count++;
+        }
+
+
+    }
+    console.log(`Before 2000 the no:of cars${count}`);
+    for (let i = 0; i < inventory.length; i++) {
+        if (inventory[i].car_year < 2000) {
+            Oldercars.push(inventory[i]);
+        }
+
+
+    }
+    return Oldercars;
+}
+module.exports={getInformationWithId,lastCarInfo,carModelsAlphabetically,allYearsOfcars,findOlderCars};
