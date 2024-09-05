@@ -70,4 +70,16 @@ function findOlderCars() {
     }
     return Oldercars;
 }
-module.exports={getInformationWithId,lastCarInfo,carModelsAlphabetically,allYearsOfcars,findOlderCars};
+//Bmw,Audi cars
+function getBMWAndAudi() {
+    let cars = [];
+    for (let i = 0; i < inventory.length; i++) {
+        if (inventory[i].car_make === 'BMW' || inventory[i].car_make === 'Audi')
+            cars.push(inventory[i])
+
+
+    }
+    return JSON.stringify(cars);
+}
+
+module.exports={getInformationWithId,lastCarInfo,carModelsAlphabetically,allYearsOfcars,findOlderCars,getBMWAndAudi};

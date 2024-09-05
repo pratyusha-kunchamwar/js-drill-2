@@ -11,10 +11,12 @@ console.log(lastCarInfo());
 console.log(carModelsAlphabetically());
 //sort alphbatically
 console.log(allYearsOfcars());
+// car years output in array
+// if some dont have year property "Property not ther"
 console.log(findOlderCars());
 // the nof cars older then 2000
 //the catds data in array get prints which are older then 2000
 
-// car years output in array
-// if some dont have year property "Property not ther"
+console.group(getBMWAndAudi());
+// in json formate dta get print of the cars
 
