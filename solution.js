@@ -10,4 +10,12 @@ function getInformationWithId(targetid) {
     }
     return "No particular id car Exists In Inventory";                          //when the id not matches to the given data
 }
-module.exports={getInformationWithId};
+
+function lastCarInfo() {
+    if (inventory.length == 0) {  //when no cars there in the inventory
+        return "No car In the Inventory"
+    }
+    let last = inventory[inventory.length - 1];
+    return `Last Car is a ${last.car_make}  ${last.car_model}`
+}
+module.exports={getInformationWithId,lastCarInfo};
