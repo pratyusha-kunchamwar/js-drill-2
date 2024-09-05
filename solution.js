@@ -18,4 +18,19 @@ function lastCarInfo() {
     let last = inventory[inventory.length - 1];
     return `Last Car is a ${last.car_make}  ${last.car_model}`
 }
-module.exports={getInformationWithId,lastCarInfo};
+function carModelsAlphabetically() {
+    if (inventory.length == 0) {  //when no cars there in the inventory
+        return "No car In the Inventory"
+    }
+    let modelNames = [];
+    for (let i = 0; i < inventory.length; i++) {
+        modelNames.push(inventory[i].car_model);
+
+    }
+
+    modelNames.sort((a, b) => {
+        return a.localeCompare(b, undefined, { sensitivity: 'variant', numeric: true });
+    });
+    return modelNames.join('\n');
+}
+module.exports={getInformationWithId,lastCarInfo,carModelsAlphabetically};
